@@ -1,8 +1,32 @@
-<input (change)="onImagePicked($event)" placeholder="Upload Image" type="file" />
-<button (click)="onImageUpload()">Upload Image</button>
+<!-- <div class="center">
+  <input (change)="onImagePicked($event)" placeholder="Upload Image" type="file" />
+  <button (click)="onImageUpload()" type="button" class="btn btn-success">Upload Image</button>
+</div>
+  
+  
 
 <div *ngIf="imageUrl">
   Preview Image from AWS
   <br />
   <img width="200px" src="https://angular-file-upload.s3.amazonaws.com/{{ imageUrl }}" />
+</div> -->
+<nav class="navbar navbar-light bg-light">
+  <a class="navbar-brand" href="#">
+    Angular File Upload to AWS S3
+  </a>
+</nav>
+<div class="container">
+  <div class="row">
+      <div class="center">
+        <input (change)="onImagePicked($event)" placeholder="Upload Image" type="file" />
+        <button (click)="onImageUpload()" type="button" class="btn btn-success center">Upload Image</button>
+      </div>
+    </div>
 </div>
+<div class="preview">
+  <p class="center">Preview of your uploaded image</p>
+  <div *ngIf="imageUrl">
+    <img width="200px" src="https://angular-file-upload.s3.amazonaws.com/{{ imageUrl }}" />
+  </div>
+</div>
+
