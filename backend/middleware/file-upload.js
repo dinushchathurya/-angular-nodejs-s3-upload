@@ -7,7 +7,7 @@ dotenv.config();
 aws.config.update({
     secretAccessKey: process.env.SECRET_ACCESS_KEY,
     accessKeyId: process.env.ACCESS_KEY_ID,
-    region: 'us-east-2' //E.g us-east-1
+    region: 'us-east-2' //Your AWS region (E.g us-east-1)
 });
 
 const s3 = new aws.S3();
